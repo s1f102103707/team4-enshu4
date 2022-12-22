@@ -5,8 +5,26 @@
     <link rel="stylesheet" type="text/css" href="public.css">
   </head>
   <body>
-    <h1>COMMENTs</h1>
-    <p>Public contents</p>
+    <div class="container">
+      <div class="inner-container">
+          <h1>Post new Chirp</h1>
+          <p>Chirp is an application for people to gather and talk.</p>
+          <form action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            <div>
+              <!--<label for="titleInput">Name</label><br>-->
+              <input id="titleInput" name="title" type="text" placeholder="ユーザー名">
+            </div>
+            <div>
+              <!--<label for="textInput">Text</label><br>-->
+              <textarea id="textInput" name="text" rows="3" placeholder="いま何してる？"></textarea>
+            </div>
+            <div>
+              <button type="submit" id="post-button">Chirp</button>
+            </div>
+          </form>
+      </div>
+  
     <h1>Timeline</h1>
     <div>
   	  <a href="{% url 'index' %}?sort=date">Sort by Date</a> | 
