@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -6,5 +7,44 @@
   <body>
     <h1>COMMENTs</h1>
     <p>Public contents</p>
+    <h1>Timeline</h1>
+    <div>
+  	  <a href="{% url 'index' %}?sort=date">Sort by Date</a> | 
+      <a href="{% url 'index' %}?sort=like">Sort by Like</a>
+	  </div>
+    
+    {% if articles %}
+    {% for article in articles %}
+    <!--
+      <div class="text">
+      <h2><a href="{% url 'detail' article.id %}">{{  article.title }}</a></h2>
+      <small>[{{ article.posted_at }}]</small>
+      <div>
+        <a href="" onclick="like({{article.id}});">
+          Like: <span id="like{{article.id}}">{{ article.like }}</span>
+        </a>
+      </div>
+      <div>
+        {{ article.body |linebreaksbr }}
+      </div>
+    </div>
+    -->
+    
+      <div class="text">
+        <h2>{{  article.title }} <small>{{ article.posted_at }}</small></h2>
+        <a class="boxlink" href="{% url 'detail' article.id %}"></a>
+        <div class="text_body">{{ article.body |linebreaksbr }}</div>
+        
+        <a class="likelink"  onclick="like({{article.id}});">
+          ❤️ <span id="like{{article.id}}">{{ article.like }}</span>
+        </a>
+      </div>
+    
+    
+    {% endfor %}
+    {% else %}
+    <p>No article.</p>
+    {% endif %}
+
   </body>
 </html>

@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detail | Chirp</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="INIAD">
+    <link href="{% static 'team9app/css/main.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <img src="{% static 'team9app/img/bird_okameinko.png' %}" alt="Logo">
+      <a href="/team9app/"><h1>Chirp</h1></a>
+    </div>
+
+    <div class="container">
+      <h1><a href="{% url 'index' %}"><</a> Detail</h1>
+
+    <div class="text">
+      <h2>{{ article.title }} <small>{{ article.posted_at }}</small></h2>
+      <div class="text_body">
+        {{ article.body | linebreaksbr }}
+      </div>
+      <p>
+        <!--<a href="{% url 'index' %}">Top</a> | -->
+        <a href="{% url 'update' article.id %}">Edit</a> | 
+        <a href="{% url 'delete' article.id %}">Delete</a>  
+      </p>
+  
+    </div>
+
+    {% if comments %}
+    {% for comment in comments %}
+    <div class="text comment">
+      ↪︎ <small>{{ comment.posted_at }}</small>
+      <div>
+        {{ comment.text | linebreaksbr }}
+      </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No comment.</p>
+    {% endif %}
+
+
+    <hr>
+    
+    <h2>Reply</h2>
+    <form action="{% url 'detail' article.id %}" method="post">
+      {% csrf_token %}
+      <div>
+        <!--<label for="textInput">Text</label><br>-->
+        <textarea id="textInput" name="text" rows="3"></textarea>
+      </div>
+      <div>
+        <button type="submit" id="post-button">Send</button>
+      </div>
+    </form>
+    
+    
+    </div>
+  </body>
+</html>
