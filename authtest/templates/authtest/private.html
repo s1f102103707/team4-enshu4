@@ -7,14 +7,12 @@
   <body>
     <h1>Post new Chirp</h1>
     <p>Chirp is an application for people to gather and talk.</p>
-    <form action="{% url 'priv' %}" method="post">
+    <form action="{% url 'pub' %}" method="post">
       {% csrf_token %}
       <div>
-        <!--<label for="titleInput">Name</label><br>-->
         <input id="titleInput" name="title" type="text" placeholder="ユーザー名">
       </div>
       <div>
-        <!--<label for="textInput">Text</label><br>-->
         <textarea id="textInput" name="text" rows="3" placeholder="いま何してる？"></textarea>
       </div>
       <div>

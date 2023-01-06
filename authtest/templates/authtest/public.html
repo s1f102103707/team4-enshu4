@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <title>public</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="public.css">
+    <script type="text/javascript" src="display.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="inner-container">
-          <h1>Post new Chirp</h1>
-          <p>Chirp is an application for people to gather and talk.</p>
-          <form action="{% url 'pub' %}" method="post">
-            {% csrf_token %}
-            <div>
-              <!--<label for="titleInput">Name</label><br>-->
-              <input id="titleInput" name="title" type="text" placeholder="ユーザー名">
-            </div>
-            <div>
-              <!--<label for="textInput">Text</label><br>-->
-              <textarea id="textInput" name="text" rows="3" placeholder="いま何してる？"></textarea>
-            </div>
-            <div>
-              <button type="submit" id="post-button">Chirp</button>
-            </div>
-          </form>
-      </div>
   
     <h1>Timeline</h1>
     <div>
@@ -33,20 +17,7 @@
     
     {% if articles %}
     {% for article in articles %}
-    <!--
-      <div class="text">
-      <h2><a href="{% url 'detail' article.id %}">{{  article.title }}</a></h2>
-      <small>[{{ article.posted_at }}]</small>
-      <div>
-        <a href="" onclick="like({{article.id}});">
-          Like: <span id="like{{article.id}}">{{ article.like }}</span>
-        </a>
-      </div>
-      <div>
-        {{ article.body |linebreaksbr }}
-      </div>
-    </div>
-    -->
+    
     
       <div class="text">
         <h2>{{  article.title }} <small>{{ article.posted_at }}</small></h2>
@@ -63,6 +34,5 @@
     {% else %}
     <p>No article.</p>
     {% endif %}
-
   </body>
 </html>
