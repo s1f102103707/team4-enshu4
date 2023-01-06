@@ -12,3 +12,110 @@ h1{
     padding-bottom:100px;
     
 }
+
+body {
+    font-family: sans-serif;
+    margin: initial;
+}
+
+#header {
+    background-color: #ffd400;
+    padding: 10px 20px 10px 20px;
+    /*padding-left: calc(15vw + 15px);*/
+    padding-left: 20vw;
+    margin: 0;
+    height: 40px;
+}
+
+#header img {
+    height: 40px;
+    float: left;
+}
+#header h1{
+    font-size: 30px;
+    margin: 0;
+    color: #333;
+    border-bottom: initial;
+    float: left;
+}
+
+#titleInput {
+    margin: 10px;
+    padding: 10px;
+    width: 40%;
+}
+
+#textInput {
+    margin: 10px;
+    padding: 10px;
+    width: 40%;
+}
+
+#post-button{
+    margin: 10px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #ffd400;
+    height: 50px;
+    width: 100px;
+    border-radius: 25px;
+    border: none;
+}
+#post-button:hover{
+    color: #fff;
+    background-color: #ffea80;
+}
+
+/*
+.text-1 {
+    margin-left: -21px;
+    margin-right: -21px;
+    margin-bottom: -1px;
+
+    padding: 20px;
+    padding-left: 40px;
+    position: relative;
+    border: 1px solid #cccccc;
+}
+*/
+.text {
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+}
+.comment{
+    background-color: #eeeeee;
+}
+.text small{
+    color: #888888;
+    font-size: 15px;
+}
+.boxlink{
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+.likelink{
+    position: relative;
+    z-index: 20;
+    
+}
+.likelink:hover {
+    color: red;
+    cursor: pointer;
+}
+
+h2 {
+    padding:0px;
+    margin:0px;
+    font-size: 20px;
+}
+
+.text_body{
+    font-size: 20px;
+}
