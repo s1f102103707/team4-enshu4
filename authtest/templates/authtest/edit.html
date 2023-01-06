@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>    
-    <title>Edit | Chirp</title>
+    <title>Edit</title>
     <meta charset="UTF-8">
     <meta name="author" content="INIAD">
     <link href="{% static 'team9app/css/main.css' %}" rel="stylesheet">
@@ -10,14 +10,14 @@
   <body>
     <div id="header">
       <img src="{% static 'team9app/img/bird_okameinko.png' %}" alt="Logo">
-      <a href="/authtest/templates/authtest/home.html"><h1>Chirp</h1></a>
+      <a href="authtest/home.html"><h1>編集画面</h1></a>
     </div>
     <div class="container">
-    <h1 >Edit</h1>
+    <h1 >編集</h1>
     <form action="{% url 'update' article.id %}" method="post">
       {% csrf_token %}
       <div>
-        <label for="titleInput">Name</label><br>
+        <label for="titleInput">名前</label><br>
         <input id="titleInput" name="title" type="text"
           placeholder="Input title" value="{{ article.title }}">
       </div>
@@ -26,7 +26,7 @@
         <textarea id="textInput" name="text" rows="3">{{ article.body }}</textarea>
       </div>
       <div>
-        <button type="submit" id="post-button">Save</button>
+        <button type="submit" id="post-button">保存</button>
       </div>
     </form>
     </div>

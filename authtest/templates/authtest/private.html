@@ -2,20 +2,19 @@
 <html lang="ja">
 <head>
     <meta charset = "utf-8">
-<title>Home</title>
+    <title>Home</title>
+  
 </head>
   <body>
-    <h1>Post new Chirp</h1>
-    <p>Chirp is an application for people to gather and talk.</p>
-    <form action="{% url 'priv' %}" method="post">
+    <h1>投稿画面</h1>
+    <p>みんなに伝えたい情報を書いて下さい</p>
+    <form action="{% url 'pub' %}" method="post">
       {% csrf_token %}
       <div>
-        <!--<label for="titleInput">Name</label><br>-->
         <input id="titleInput" name="title" type="text" placeholder="ユーザー名">
       </div>
       <div>
-        <!--<label for="textInput">Text</label><br>-->
-        <textarea id="textInput" name="text" rows="3" placeholder="いま何してる？"></textarea>
+        <textarea id="textInput" name="text" rows="3" placeholder="連絡情報はここに書いて下さい"></textarea>
       </div>
       <div>
         <button type="submit" id="post-button">Chirp</button>

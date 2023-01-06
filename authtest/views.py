@@ -33,7 +33,7 @@ def index(request):
     context = {
         "articles": articles
     }
-    return render(request, 'authtest/home.html', context)
+    return render(request, 'authtest/public.html', context)
 
 def update(request, article_id):
     return HttpResponse("article_id: {}".format(article_id))
