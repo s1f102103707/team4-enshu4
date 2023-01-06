@@ -6,19 +6,18 @@
     <link rel="stylesheet" type="text/css" href="public.css">
     <script type="text/javascript" src="display.js"></script>
   </head>
+
   <body>
     <div class="container">
   
     <h1>掲示板一覧</h1>
     <div>
-  	  <a href="{% url 'pub' %}?sort=date">Sort by Date</a> | 
-      <a href="{% url 'pub' %}?sort=like">Sort by Like</a>
+  	  <a href="{% url 'pub' %}?sort=date">日付で並び変え</a> | 
+      <a href="{% url 'pub' %}?sort=like">チェック数で並び変え</a>
 	  </div>
     
     {% if articles %}
     {% for article in articles %}
-    
-    
       <div class="text">
         <h2>{{  article.title }} <small>{{ article.posted_at }}</small></h2>
         <a class="boxlink" href="{% url 'detail' article.id %}"></a>
@@ -29,10 +28,9 @@
         </a>
       </div>
     
-    
     {% endfor %}
     {% else %}
-    <p>No article.</p>
+    <p>連絡はありません</p>
     {% endif %}
   </body>
 </html>
