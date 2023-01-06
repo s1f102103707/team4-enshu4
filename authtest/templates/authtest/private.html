@@ -1,13 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset = "utf-8">
     <title>Home</title>
-  
+    <link href="{% static 'team4app/css/public.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'team4app/js/display.js' %}" ></script>
 </head>
   <body>
     <h1>投稿画面</h1>
-    <p>みんなに伝えたい情報を書いて下さい</p>
+    <p id="line-middle">みんなに伝えたい情報を書いて下さい</p>
     <form action="{% url 'pub' %}" method="post">
       {% csrf_token %}
       <div>
@@ -17,7 +19,7 @@
         <textarea id="textInput" name="text" rows="3" placeholder="連絡情報はここに書いて下さい"></textarea>
       </div>
       <div>
-        <button type="submit" id="post-button">Chirp</button>
+        <button type="submit" id="post-button">投稿</button>
       </div>
     </form>
   </body>

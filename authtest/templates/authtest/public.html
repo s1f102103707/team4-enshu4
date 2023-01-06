@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <title>public</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="public.css">
-    <script type="text/javascript" src="display.js"></script>
+    <link href="{% static 'team4app/css/public.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'team4app/js/display.js' %}" ></script>
   </head>
 
   <body>

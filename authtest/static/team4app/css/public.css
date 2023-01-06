@@ -2,6 +2,10 @@ h1{
     text-align: center;
 }
 
+#line-middle{
+    text-align: center;
+}
+
 .inner-container{
     border-bottom: 1px solid #ccc;
 }
@@ -55,7 +59,7 @@ body {
     margin: 10px;
     color: #fff;
     font-size: 20px;
-    background-color: #ffd400;
+    background-color: aqua;
     height: 50px;
     width: 100px;
     border-radius: 25px;
@@ -63,7 +67,7 @@ body {
 }
 #post-button:hover{
     color: #fff;
-    background-color: #ffea80;
+    background-color: aqua;
 }
 
 /*
