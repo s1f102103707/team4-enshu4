@@ -3,7 +3,7 @@
 <head>
     <meta charset = "utf-8">
 <title>Home</title>
-<link rel="stylesheet" href="./home.css">
+<link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
   <header>チャットアプリ</header>
@@ -17,7 +17,8 @@
   {% endif %}
 
   <hr>
-  <p><a href="{% url 'priv' %}">priv</a></p>
-  <p><a href="{% url 'pub' %}">public</a></p>
+
+  <p><a href="{% url 'priv' %}">プライベートルーム</a></p>
+  <p><a href="{% url 'pub' %}">パブリックルーム</a></p>
 </body>
 </html>
