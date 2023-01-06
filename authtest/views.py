@@ -33,7 +33,7 @@ def index(request):
     context = {
         "articles": articles
     }
-    return render(request, 'team9app/index.html', context)
+    return render(request, 'authtest/home.html', context)
 
 def update(request, article_id):
     return HttpResponse("article_id: {}".format(article_id))
@@ -52,7 +52,7 @@ def detail(request, article_id):
         "article": article,
         'comments': article.comments.order_by('-posted_at')
     }
-    return render(request, "team9app/detail.html", context)
+    return render(request, "authtest/detail.html", context)
 
 def update(request, article_id):
     try:
@@ -67,7 +67,7 @@ def update(request, article_id):
     context = {
         "article": article
     }
-    return render(request, "team9app/edit.html", context)
+    return render(request, "authtest/edit.html", context)
 
 def delete(request, article_id):
     try:

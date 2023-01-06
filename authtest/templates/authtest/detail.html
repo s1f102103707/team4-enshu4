@@ -10,11 +10,11 @@
   <body>
     <div id="header">
       <img src="{% static 'team9app/img/bird_okameinko.png' %}" alt="Logo">
-      <a href="/team9app/"><h1>Chirp</h1></a>
+      <a href="/authtest/templates/authtest/home.html"><h1>Chirp</h1></a>
     </div>
 
     <div class="container">
-      <h1><a href="{% url 'index' %}"><</a> Detail</h1>
+      <h1><a href="{% url 'home' %}"><</a> Detail</h1>
 
     <div class="text">
       <h2>{{ article.title }} <small>{{ article.posted_at }}</small></h2>

@@ -9,7 +9,7 @@
       <div class="inner-container">
           <h1>Post new Chirp</h1>
           <p>Chirp is an application for people to gather and talk.</p>
-          <form action="{% url 'index' %}" method="post">
+          <form action="{% url 'pub' %}" method="post">
             {% csrf_token %}
             <div>
               <!--<label for="titleInput">Name</label><br>-->
@@ -27,8 +27,8 @@
   
     <h1>Timeline</h1>
     <div>
-  	  <a href="{% url 'index' %}?sort=date">Sort by Date</a> | 
-      <a href="{% url 'index' %}?sort=like">Sort by Like</a>
+  	  <a href="{% url 'pub' %}?sort=date">Sort by Date</a> | 
+      <a href="{% url 'pub' %}?sort=like">Sort by Like</a>
 	  </div>
     
     {% if articles %}
