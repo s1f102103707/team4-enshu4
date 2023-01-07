@@ -15,6 +15,7 @@
   <h1>チャットアプリへようこそ！</h1>
   {% if user.is_authenticated %}
   <p>こんにちは {{ user.username }}さん!</p>
+  <p>今日の連絡を確認しましょう！</p>
   <a href="{% url 'logout' %}">ログアウトはこちらから</a>
   {% else %}
   <p>まだログイン出来ていません。</p>
