@@ -13,10 +13,10 @@
     <form action="{% url 'pub' %}" method="post">
       {% csrf_token %}
       <div>
-        <input id="titleInput" name="title" type="text" placeholder="ユーザー名">
+        <input id="titleInput" name="title" type="text" placeholder="投稿者名">
       </div>
       <div>
-        <textarea id="textInput" name="text" rows="3" placeholder="連絡情報はここに書いて下さい"></textarea>
+        <textarea id="textInput" name="text" rows="5" placeholder="連絡情報はここに書いて下さい"></textarea>
       </div>
       <div>
         <button type="submit" id="post-button">投稿</button>

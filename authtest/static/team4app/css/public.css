@@ -14,7 +14,6 @@ h1{
     width: 60vw;
     margin-left: 20vw;
     padding-bottom:100px;
-    
 }
 
 body {
@@ -23,12 +22,10 @@ body {
 }
 
 #header {
-    background-color: #ffd400;
-    padding: 10px 20px 10px 20px;
-    /*padding-left: calc(15vw + 15px);*/
-    padding-left: 20vw;
+    background-color: aqua;
+    padding: 8px 15px 8px 15px;
     margin: 0;
-    height: 40px;
+    height: 35px;
 }
 
 #header img {
@@ -70,18 +67,6 @@ body {
     background-color: aqua;
 }
 
-/*
-.text-1 {
-    margin-left: -21px;
-    margin-right: -21px;
-    margin-bottom: -1px;
-
-    padding: 20px;
-    padding-left: 40px;
-    position: relative;
-    border: 1px solid #cccccc;
-}
-*/
 .text {
     margin: 10px;
     padding: 20px;
@@ -110,7 +95,7 @@ body {
     
 }
 .likelink:hover {
-    color: red;
+    color: blueviolet;
     cursor: pointer;
 }
 
