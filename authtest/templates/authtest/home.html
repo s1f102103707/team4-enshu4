@@ -1,16 +1,20 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+  <head>
+    <title>Home</title>
     <meta charset = "utf-8">
-<title>Home</title>
-<link href="{% static 'teama4pp/css/home.css' %}" rel="stylesheet">
-</head>
+    <link href="{% static 'team4app/css/home.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'team4app/js/display.js' %}" ></script>
+  </head>
 <body>
-  <header>チャットアプリ</header>
-
+  <div class="container">
+  <div id="logo">
+    <img src="{% static 'team4app/img/iniad (1).png' %}" alt="Logo">
+  </div>
+  <h1>チャットアプリへようこそ！</h1>
   {% if user.is_authenticated %}
-  <p>ようこそ {{ user.username }}さん!</p>
+  <p>こんにちは {{ user.username }}さん!</p>
   <a href="{% url 'logout' %}">ログアウトはこちらから</a>
   {% else %}
   <p>まだログイン出来ていません。</p>
@@ -19,7 +23,9 @@
 
   <hr>
 
-  <p><a href="{% url 'priv' %}">プライベートルーム</a></p>
-  <p><a href="{% url 'pub' %}">パブリックルーム</a></p>
+  <a href="{% url 'priv' %}">プライベートルーム </a>|
+  <a href="{% url 'pub' %}"> パブリックルーム </a>|
+  <a href="{% url 'home' %}"> ホームルーム </a>|
+  </div>
 </body>
 </html>

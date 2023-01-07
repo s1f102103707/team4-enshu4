@@ -1,10 +1,11 @@
-header {
-    color: blue;
-    border-color: aqua;
-    font-size: large;
-    background-color: #a7d5ec;
-    height: 30px;
-    position: fixed;
-    width: 100%;
+h1 {
+    border-bottom: solid 1px #17194c;
 }
-
+#logo{
+    background-color: #17194c;
+    padding: 10px 20px 10px 20px;
+    height: 100px;
+}
+#logo img{
+    height: 100px;
+}
