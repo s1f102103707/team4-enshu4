@@ -9,9 +9,8 @@
   </head>
 
   <body>
-    <img src="{% static 'team4app/img/ペンギン.png' %}" alt="Logo">
     <div class="container">
-    <h1>掲示板一覧</h1>
+    <h1>掲示板一覧</h1> <img id="pengin" src="{% static 'team4app/img/ペンギン.png' %}" alt="Logo">
     <div>
   	  <a href="{% url 'pub' %}?sort=date">日付で並び変え</a> | 
       <a href="{% url 'pub' %}?sort=like">チェック数で並び変え</a>
@@ -34,6 +33,6 @@
     <p>連絡はありません</p>
     {% endif %}
     </div>
-    <a id="padding" href="{% url 'home' %}"> ホームへ戻る </a>|
+    <a id="padding" href="{% url 'home' %}"> ホームへ戻る </a>
   </body>
 </html>
