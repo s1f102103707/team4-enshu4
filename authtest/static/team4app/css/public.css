@@ -81,6 +81,11 @@ body {
     color: #888888;
     font-size: 15px;
 }
+
+#padding{
+    padding-left: 10px;
+}
+
 .boxlink{
     top: 0;
     left: 0;

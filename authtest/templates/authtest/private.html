@@ -8,6 +8,7 @@
     <script type="text/javascript" src="{% static 'team4app/js/display.js' %}" ></script>
 </head>
   <body>
+    <img src="{% static 'team4app/img/ペンギン.png' %}" alt="Logo">
     <h1>投稿画面</h1>
     <p id="line-middle">みんなに伝えたい情報を書いて下さい</p>
     <form action="{% url 'pub' %}" method="post">
@@ -22,5 +23,6 @@
         <button type="submit" id="post-button">投稿</button>
       </div>
     </form>
+    <div id="padding"><a href="{% url 'home' %}"> ホームへ戻る </a>|</div>
   </body>
 </html>
