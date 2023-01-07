@@ -15,9 +15,6 @@ def private_page(request):
     return render(request, 'authtest/private.html', {})
 
 def public_page(request):
-    return render(request, 'authtest/public.html', {})
-
-def index(request):
     if request.method == 'POST':
         article = Article(title=request.POST['title'], body=request.POST['text'])
         article.save()
@@ -77,7 +74,7 @@ def delete(request, article_id):
     
     article.delete()
     
-    return redirect(index)
+    return redirect(public_page)
 
 def like(request, article_id):
     try:

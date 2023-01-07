@@ -8,13 +8,9 @@
     <link href="{% static 'team4app/css/public.css' %}" rel="stylesheet">
   </head>
   <body>
-    <div id="header">
-      <img src="{% static 'team9app/img/bird_okameinko.png' %}" alt="Logo">
-      <a href="/authtest/templates/authtest/home.html"><h1>Chirp</h1></a>
-    </div>
 
     <div class="container">
-      <h1><a href="{% url 'home' %}"></a> Detail</h1>
+      <h1><a href="{% url 'home' %}"></a> 詳細ページ</h1>
 
     <div class="text">
       <h2>{{ article.title }} <small>{{ article.posted_at }}</small></h2>
@@ -22,7 +18,6 @@
         {{ article.body | linebreaksbr }}
       </div>
       <p>
-        <!--<a href="{% url 'index' %}">Top</a> | -->
         <a href="{% url 'update' article.id %}">Edit</a> | 
         <a href="{% url 'delete' article.id %}">Delete</a>  
       </p>
@@ -42,6 +37,8 @@
     <p>No comment.</p>
     {% endif %}
 
+    <a href="{% url 'pub' %}"> 掲示板を見る </a>|
+    <a href="{% url 'home' %}"> ホームへ戻る </a>
 
     <hr>
     

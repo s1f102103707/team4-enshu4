@@ -5,24 +5,20 @@
     <title>Edit</title>
     <meta charset="UTF-8">
     <meta name="author" content="INIAD">
-    <link href="{% static 'team9app/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'team4app/css/public.css' %}" rel="stylesheet">
   </head>
   <body>
-    <div id="header">
-      <img src="{% static 'team9app/img/bird_okameinko.png' %}" alt="Logo">
-      <a href="authtest/home.html"><h1>編集画面</h1></a>
-    </div>
     <div class="container">
     <h1 >編集</h1>
     <form action="{% url 'update' article.id %}" method="post">
       {% csrf_token %}
       <div>
-        <label for="titleInput">名前</label><br>
+        <label for="titleInput"><strong>名前</strong></label><br>
         <input id="titleInput" name="title" type="text"
           placeholder="Input title" value="{{ article.title }}">
       </div>
       <div>
-        <label for="textInput">Chirp</label><br>
+        <label for="textInput"><strong>内容</strong></label><br>
         <textarea id="textInput" name="text" rows="3">{{ article.body }}</textarea>
       </div>
       <div>
